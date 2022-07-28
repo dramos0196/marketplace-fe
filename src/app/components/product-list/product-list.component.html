@@ -1,0 +1,44 @@
+<app-layout>
+    <ol class="search-layout" >
+        <li class="search-layout__item" *ngFor="let item of productList.items;">
+            <div class="ui-search-result__wrapper">
+                <div class="product-item">
+                    <div class="product-item__image"><a
+                        [routerLink]="['/items', item.id]"
+                            class="ui-search-link" title="Apple iPod Touch 7g De 32gb">
+                            <div class="carousel-container arrow-visible">
+                                <div class="slick-initialized slick-slider">
+                                    <div role="presentation" class="slick-list">
+                                        <div class="slick-track"
+                                            style="opacity: 1; transform: translate3d(0px, 0px, 0px); width: 480px;">
+                                            <div data-index="0" class="slick-slide slick-active" tabindex="-1"
+                                                style="width: 160px;"><img width="160" height="160"
+                                                    src={{item.picture}}
+                                                    class="ui-search-result-image__element"
+                                                    alt={{item.title}}></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a></div>
+                    <div class="product-item__content">
+                        <div class="product-item__content-row">
+
+                            <h2 class="product-price">{{item.price?.amount | currency:item.price?.currency:'$': '1.0-0' }}</h2>
+                            <span class="product-shipping" *ngIf="item.free_shipping">
+                                <img src="assets/ic_shipping@2x.png.png" width="25" height="25" alt="">
+                            </span>
+                        </div>
+                        <h2 class="product-title">
+                            {{item.title}}
+                        </h2>
+                    </div>
+                    <div class="product-item__info">
+                        <h5>ciudad</h5>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ol>
+
+</app-layout>

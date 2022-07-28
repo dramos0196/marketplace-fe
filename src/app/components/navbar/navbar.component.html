@@ -1,0 +1,12 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-yellow justify-content-center">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form [formGroup]="form" class="form-inline d-flex">
+            <a class="navbar-brand" href="#">
+                <img src="assets/Logo_ML.png" width="50" height="38" alt="">
+            </a>
+            <input class="form-control mr-sm-2" type="search" formControlName="query" placeholder="Nunca dejes de buscar" aria-label="Nunca dejes de buscar">
+            <button class="btn" type="submit" (click)="onClickSearch()"></button>
+        </form>
+    </div>
+</nav>

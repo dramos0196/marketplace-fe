@@ -1,0 +1,28 @@
+<app-layout>
+    <div class="product-detail__container">
+        <div class="product-detail__img">
+            <img
+                src={{productDetail.picture}}
+                class="ui-search-result-image__element" alt="">
+        </div>
+        <div class="product-detail__title">
+            <span>
+                {{productDetail.condition}}
+            </span>
+            <h2 class="product-title">
+                {{productDetail.title}}
+            </h2>
+            <h2 class="product-price">
+                {{productDetail.price?.amount | currency:productDetail.price?.currency:'$': '1.0-0' }}
+            </h2>
+            <button type="button">Comprar</button>
+        </div>
+        <div class="product-detail__desc">
+            <h3 class="product">Descripcion del producto</h3>
+            <p>
+                {{productDetail.description}}
+            </p>
+            
+        </div>
+    </div>
+</app-layout>
